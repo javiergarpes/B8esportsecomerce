@@ -1,8 +1,9 @@
 import { Pressable, TextInput, View } from 'react-native'
 import React, { useState } from 'react'
-
+import { colors } from '../../constants/colors'
 import AntDesign from '@expo/vector-icons/AntDesign'
 import styles from './Searchinput.style'
+
 
 const SearchInput = ({ onSearch }) => {
   const [value, setValue] = useState('')
@@ -16,6 +17,9 @@ const SearchInput = ({ onSearch }) => {
     onSearch('')
   }
 
+  
+  
+
   return (
     <View style={styles.container}>
       <TextInput
@@ -25,10 +29,10 @@ const SearchInput = ({ onSearch }) => {
         placeholder="Search product"
       />
       <Pressable onPress={search}>
-        <AntDesign name="search1" size={25} color={'black'} />
+        <AntDesign name="search1" size={25} color={colors.decimo} />
       </Pressable>
       <Pressable onPress={clearInput}>
-        <AntDesign name="closecircleo" size={25} color={'black'} />
+        <AntDesign name="closecircleo" size={25} color={colors.decimo} />
       </Pressable>
     </View>
   )

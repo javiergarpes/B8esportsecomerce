@@ -4,9 +4,9 @@ import React from 'react'
 import {Card} from '../../../../Components'
 import styles from './Categoryitem.style'
 
-const CategoryItem = ({category}) => {
+const CategoryItem = ({category,setCategorySelected}) => {
   return (
-    <Pressable onPress={()=>console.log(`esta es la category: ${category}`)}>
+    <Pressable onPress={()=> setCategorySelected(category)}>
         <Card style={styles.cardContainer}>
             <Text style={styles.text}>{category}</Text>
         </Card>

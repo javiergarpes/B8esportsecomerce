@@ -5,8 +5,11 @@ export default styles = StyleSheet.create({
         marginHorizontal:30,
         marginVertical:10,
         padding:10,
+        width:'85%',
         justifyContent:'center',
-        alignItems:'center'
+        alignItems:'center',
+        borderRadius:8,
+        
     },
     text:{
       fontSize:30,

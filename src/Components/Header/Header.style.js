@@ -13,5 +13,6 @@ export default styles = StyleSheet.create({
     },
     text: {
       fontSize: 30,
+      fontFamily:'Bebas'
     },
   });
