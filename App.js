@@ -1,5 +1,6 @@
-import Home from "./src/screens/Home";
+import { Home,Products } from './src/screens'
+
 
 export default function App() {
-  return <Home />
+  return <Products category={"smartphones"} />
 }
