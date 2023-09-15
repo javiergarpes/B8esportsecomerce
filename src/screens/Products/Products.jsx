@@ -1,11 +1,11 @@
-import { FlatList, Text, View } from "react-native";
+import { FlatList, Text, Touchable, TouchableOpacity, View } from "react-native";
 import React, { useState, useEffect } from "react";
 import styles from "./Products.style";
 import { Header, SearchInput } from "../../Components/";
 import allProducts from "../../data/products";
 import Searchinput from "../../Components/Searchinput/Searchinput";
 
-const Products = ({ category }) => {
+const Products = ({ category,setProductSelected }) => {
   const [arrProducts, setArrPoducts] = useState([]);
   const [keyword, setKeyword] = useState("");
   useEffect(() => {
@@ -32,9 +32,9 @@ const Products = ({ category }) => {
         <FlatList
           data={arrProducts}
           renderItem={({ item }) => (
-            <View>
+            <TouchableOpacity onPress={()=>setProductSelected(item)}>
               <Text>{item.title}</Text>
-            </View>
+            </TouchableOpacity>
           )}
           keyExtractor={(item) => item.id}
         />
