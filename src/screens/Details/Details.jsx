@@ -5,7 +5,7 @@ import React from 'react'
 import styles from './Details.style'
 
 const Details = ({ product }) => {
-  
+  //
   return (
     <View style={styles.container}>
       <Header title={'Detalle'} />
