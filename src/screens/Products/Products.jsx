@@ -1,13 +1,21 @@
-import { FlatList, Text, Touchable, TouchableOpacity, View } from "react-native";
+import {
+  FlatList,
+  Text,
+  Touchable,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import React, { useState, useEffect } from "react";
 import styles from "./Products.style";
 import { Header, SearchInput } from "../../Components/";
 import allProducts from "../../data/products";
 import Searchinput from "../../Components/Searchinput/Searchinput";
 
-const Products = ({ category,setProductSelected }) => {
+const Products = ({ navigation, route }) => {
   const [arrProducts, setArrPoducts] = useState([]);
   const [keyword, setKeyword] = useState("");
+  const { category } = route.params;
+
   useEffect(() => {
     if (category) {
       const products = allProducts.filter(
@@ -32,7 +40,9 @@ const Products = ({ category,setProductSelected }) => {
         <FlatList
           data={arrProducts}
           renderItem={({ item }) => (
-            <TouchableOpacity onPress={()=>setProductSelected(item)}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate("Details", { product: item })}
+            >
               <Text>{item.title}</Text>
             </TouchableOpacity>
           )}
