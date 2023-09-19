@@ -4,6 +4,8 @@ import {
   Touchable,
   TouchableOpacity,
   View,
+  SafeAreaView,
+  Image,
 } from "react-native";
 import React, { useState, useEffect } from "react";
 import styles from "./Products.style";
@@ -33,24 +35,34 @@ const Products = ({ navigation, route }) => {
     }
   }, [category, keyword]);
   return (
-    <View style={styles.container}>
-      <Header title={category} />
-      <Searchinput onSearch={setKeyword} />
+    <SafeAreaView style={styles.container}>
+      {/* <Header title={category} /> */}
+      <SearchInput onSearch={setKeyword} />
       <View style={styles.listContainer}>
         <FlatList
           data={arrProducts}
+          numColumns={2}
+          columnWrapperStyle={styles.weapperStyle}
           renderItem={({ item }) => (
             <TouchableOpacity
-              onPress={() => navigation.navigate("Details", { product: item })}
+              style={styles.productContainer}
+              onPress={() => navigation.navigate('Details', { product: item })}
             >
-              <Text>{item.title}</Text>
+              <Image
+                style={styles.image}
+                source={{
+                  uri: item.images[0],
+                }}
+              />
+              <Text style={styles.title}>{item.title}</Text>
+              <Text style={styles.price}>{`$${item.price.toFixed(2)}`}</Text>
             </TouchableOpacity>
           )}
-          keyExtractor={(item) => item.id}
+          keyExtractor={item => item.id}
         />
       </View>
-    </View>
-  );
+    </SafeAreaView>
+  )
 };
 
 export default Products;

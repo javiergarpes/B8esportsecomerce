@@ -1,18 +1,40 @@
-import { StyleSheet } from "react-native";
-import { colors } from "../../constants/colors";
-
-
+import { StyleSheet } from 'react-native'
+import { colors } from '../../constants/colors'
 
 export default styles = StyleSheet.create({
-    container:{
-    flex:1,
-    backgroundColor:'#fff',
-    },
-    listContainer:{
-        paddingHorizontal:15,
-        flex:1,
-        marginTop:15,
-    }
-
-
+  container: {
+    flex: 1,
+    backgroundColor: colors.secondary,
+  },
+  listContainer: {
+    flex: 1,
+    marginTop: 15,
+    paddingHorizontal: 15,
+  },
+  weapperStyle: {
+    justifyContent: 'space-between',
+  },
+  productContainer: {
+    width: '47%',
+    backgroundColor: colors.primary,
+    marginBottom: 20,
+    alignItems: 'flex-start',
+    paddingVertical: 15,
+    paddingHorizontal: 10,
+    borderRadius: 15,
+    gap: 10,
+  },
+  image: {
+    alignSelf: 'center',
+    height: 150,
+    width: 150,
+  },
+  title: {
+    fontWeight: '700',
+    fontVariant: 'small-caps',
+  },
+  price: {
+    fontSize: 20,
+    fontVariant: '',
+  },
 })
