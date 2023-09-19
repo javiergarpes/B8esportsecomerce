@@ -21,7 +21,7 @@ export default styles = StyleSheet.create({
     alignItems: 'flex-start',
     paddingVertical: 15,
     paddingHorizontal: 10,
-    borderRadius: 15,
+    borderRadius: 20,
     gap: 10,
   },
   image: {
