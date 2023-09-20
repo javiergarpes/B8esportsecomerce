@@ -10,9 +10,18 @@ export default styles = StyleSheet.create({
       width: "100%",
       justifyContent: "center",
       alignItems: "center",
+      flexDirection:"row",
     },
     text: {
       fontSize: 30,
-      fontFamily:'Bebas'
+      fontFamily:'Bebas',
+      alignContent:'center',
+      
     },
+    Images:{
+      justifyContent:"space-between",
+      height:"118%",
+      width: "14%",
+      
+    }
   });
