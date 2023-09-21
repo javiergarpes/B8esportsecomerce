@@ -6,8 +6,9 @@ export default styles = StyleSheet.create({
         flexDirection:'row',
         justifyContent:'space-between',
         alignItems:'center',
-        width:'90%',
+        width:'100%',
         paddingTop:10,
+        backgroundColor:colors.secondary,
     },
     input:{
         color:'white',
@@ -15,7 +16,7 @@ export default styles = StyleSheet.create({
         borderRadius:8,
         padding:10,
         borderWidth:1,
-        borderColor: colors.primary,
+        borderColor: colors.octavo,
         width:"80%",
         fontSize:20,
         

@@ -26,7 +26,7 @@ function BottomTabNavigator() {
             <FontAwesome
               name="trophy"
               size={30}
-              color={focused ? colors.decimo : "#fff"}
+              color={focused ? colors.secondary : colors.octavo}
             />
           ),
         }}
@@ -39,7 +39,7 @@ function BottomTabNavigator() {
             <Feather
               name="shopping-cart"
               size={24}
-              color={focused ? colors.decimo : "#fff"}
+              color={focused ? colors.secondary : colors.octavo}
             />
           ),
         }}
@@ -52,7 +52,7 @@ function BottomTabNavigator() {
           <Feather
           name='list'
           size={24}
-          color={focused ? colors.decimo: '#fff'}
+          color={focused ? colors.secondary : colors.octavo}
           />
         )
       }}
@@ -65,8 +65,8 @@ export default BottomTabNavigator;
 
 const styles = StyleSheet.create({
   tabBar: {
-    backgroundColor: colors.octavo,
-    borderColor: colors.secondary,
+    backgroundColor: colors.decimo,
+    borderColor: colors.decimo,
     borderRadius: 70,
     marginTop: "-12%",
   },

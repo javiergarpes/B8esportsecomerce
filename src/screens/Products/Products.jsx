@@ -11,7 +11,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./Products.style";
 import { Header, SearchInput } from "../../Components/";
 import allProducts from "../../data/products";
-import Searchinput from "../../Components/Searchinput/Searchinput";
+
 
 const Products = ({ navigation, route }) => {
   const [arrProducts, setArrPoducts] = useState([]);
@@ -36,7 +36,7 @@ const Products = ({ navigation, route }) => {
   }, [category, keyword]);
   return (
     <SafeAreaView style={styles.container}>
-      {/* <Header title={category} /> */}
+      {/* <Header title={category} />*/ }
       <SearchInput onSearch={setKeyword} />
       <View style={styles.listContainer}>
         <FlatList

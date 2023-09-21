@@ -3,7 +3,7 @@ import { colors } from "../../constants/colors";
 
 export default styles = StyleSheet.create({ 
     container:{
-        
+        //marginTop:50,
         backgroundColor:colors.decimo,
         height:"auto"
     },
@@ -13,8 +13,8 @@ export default styles = StyleSheet.create({
         backgroundColor:colors.octavo,
         marginTop:1,
         padding:1,
-        width:"auto",
-        height:"17%",
+        width:"100%",
+        height:"11%",
       },
       itemx: {
         backgroundColor: 'red',

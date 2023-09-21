@@ -5,8 +5,8 @@ import { colors } from "../../constants/colors";
 export default styles = StyleSheet.create({
     container: {
       backgroundColor: colors.secondary ,
-      height: 80,
-      paddingTop: 30,
+      height: 90,
+      paddingTop: 35,
       width: "100%",
       justifyContent: "center",
       alignItems: "center",
@@ -16,12 +16,13 @@ export default styles = StyleSheet.create({
       fontSize: 30,
       fontFamily:'Bebas',
       alignContent:'center',
+      justifyContent: "center",
       
     },
     Images:{
-      justifyContent:"space-between",
-      height:"118%",
-      width: "14%",
+      
+      height:"110%",
+      width: "13%",
       
     }
   });

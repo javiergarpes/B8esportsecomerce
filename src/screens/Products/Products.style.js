@@ -5,11 +5,13 @@ export default styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.secondary,
+    
   },
   listContainer: {
     flex: 1,
     marginTop: 15,
     paddingHorizontal: 15,
+    backgroundColor:colors.octavo,
   },
   weapperStyle: {
     justifyContent: 'space-between',

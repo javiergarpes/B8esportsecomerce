@@ -5,8 +5,9 @@ import {  CategoryItem } from "./components";
 import { Header } from "../../Components";
 import { View, FlatList,Text,Image } from "react-native";
 import dataCategories from "../../data/dataCategories";
-import { SafeAreaView } from "react-native-safe-area-context";
+
 import CarrucelData from "../../data/CarrucelData";
+
 
 const Item = ({title}) => (
   <View style={styles.itemx}>
@@ -17,8 +18,8 @@ const Home = ({  navigation }) => {
   return (
     <View style={styles.container}>
       <Header title={"Torneos"} />
-      
-      <SafeAreaView style={styles.containerx}>
+      {/*<Counter/>*/}
+      <View style={styles.containerx}>
       <FlatList
       
         data={CarrucelData}
@@ -37,7 +38,7 @@ const Home = ({  navigation }) => {
 
         
       />
-    </SafeAreaView>
+    </View>
       
       
       <FlatList

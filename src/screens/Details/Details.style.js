@@ -1,14 +1,17 @@
 import { StyleSheet } from "react-native";
+import { colors } from "../../constants/colors";
 
 export default styles = StyleSheet.create({
     container: {
         flex:1,
-        backgroundColor:'#FFFFFF',
+        backgroundColor:colors.octavo,
         
     },
     image:{
-        height:'50%',
+        alignSelf:"center",
+        height:'45%',
         width:"90%",
+        borderRadius:8,
     },
     title:{
         fontSize : 30 ,
@@ -16,10 +19,16 @@ export default styles = StyleSheet.create({
         marginVertical:15,
     },
     price:{
-        fontSize: 20,
+        fontSize: 25,
         fontWeight:"bold",
         marginVertical:15,
         fontFamily:'Bebas',
-    }
+    },
+    description:{
+        fontSize :21 ,
+    },
+
+
+
 
 })
