@@ -1,0 +1,1 @@
+export const baseUrl = 'https://b8-esports-default-rtdb.firebaseio.com'

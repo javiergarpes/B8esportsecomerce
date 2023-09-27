@@ -1,7 +1,6 @@
 import {
   FlatList,
   Text,
-  Touchable,
   TouchableOpacity,
   View,
   SafeAreaView,
@@ -9,38 +8,35 @@ import {
 } from "react-native";
 import React, { useState, useEffect } from "react";
 import styles from "./Products.style";
-import { Header, SearchInput } from "../../Components/";
-import allProducts from "../../data/products";
+import { SearchInput } from "../../Components/";
+import { useSelector } from "react-redux";
+
+import { useGetProductsByCategoryQuery } from "../../services/shopApi";
 
 
-const Products = ({ navigation, route }) => {
-  const [arrProducts, setArrPoducts] = useState([]);
-  const [keyword, setKeyword] = useState("");
-  const { category } = route.params;
+const Products = ({ navigation }) => {
+  const category = useSelector(state => state.shop.categorySelected)
+  const [keyword, setKeyword] = useState('');
+  const {data,isLoading}=useGetProductsByCategoryQuery(category)
+  
 
   useEffect(() => {
-    if (category) {
-      const products = allProducts.filter(
-        (product) => product.category === category
-      );
-      const productFiltered = products.filter((product) =>
+    console.log(data)
+    if (data) {
+    
+      const productFiltered = data.filter(product =>
         product.title.includes(keyword)
       );
-      setArrPoducts(productFiltered);
-    } else {
-      const productsFiltered = allProducts.filter((product) =>
-        product.title.includes(keyword)
-      );
-      setArrPoducts(productsFiltered);
-    }
-  }, [category, keyword]);
+    } 
+  }, []);
   return (
     <SafeAreaView style={styles.container}>
-      {/* <Header title={category} />*/ }
+      
       <SearchInput onSearch={setKeyword} />
       <View style={styles.listContainer}>
+        {!isLoading && (
         <FlatList
-          data={arrProducts}
+          data={Object.values(data)}
           numColumns={2}
           columnWrapperStyle={styles.weapperStyle}
           renderItem={({ item }) => (
@@ -60,6 +56,7 @@ const Products = ({ navigation, route }) => {
           )}
           keyExtractor={item => item.id}
         />
+        )}
       </View>
     </SafeAreaView>
   )
