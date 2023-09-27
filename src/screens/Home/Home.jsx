@@ -7,7 +7,6 @@ import { View, FlatList,Text,Image } from "react-native";
 import dataCategories from "../../data/dataCategories";
 
 import CarrucelData from "../../data/CarrucelData";
-import { useGetCategoriesQuery } from "../../services/shopApi";
 
 
 const Item = ({title}) => (
@@ -16,11 +15,10 @@ const Item = ({title}) => (
   </View>
 );
 const Home = ({  navigation }) => {
-  const {data,isLoading}=useGetCategoriesQuery()
   return (
     <View style={styles.container}>
       <Header title={"Torneos"} />
-      
+      {/*<Counter/>*/}
       <View style={styles.containerx}>
       <FlatList
       
@@ -44,11 +42,11 @@ const Home = ({  navigation }) => {
       
       
       <FlatList
-        data={data}
-        keyExtractor={(category) => category.title}
+        data={dataCategories}
+        keyExtractor={(category) => category}
         renderItem={({ item }) => (
           <CategoryItem
-            category={item.title}
+            category={item}
             navigation={navigation}
           />
         )}

@@ -1,24 +1,15 @@
-import { Pressable, Text, View } from "react-native";
+import { Pressable, Text, useWindowDimensions } from "react-native";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { Card } from "../../../../Components";
-import { setCategorySelected } from '../../../../features/shop/shopSlice'
-import styles from "./CategoryItem.style";
-import { useDispatch } from "react-redux";
+import styles from "./Categoryitem.style";
 
 const CategoryItem = ({ category, navigation }) => {
-  const dispatch = useDispatch()
   return (
-    <Pressable
-    onPress={() => {
-      dispatch(setCategorySelected(category))
-      navigation.navigate('Products', { category })
-    }}
-    style={styles.container}
-  >
-      <View style={styles.cardContainer}>
+    <Pressable onPress={() => navigation.navigate("Products",{category})}>
+      <Card style={styles.cardContainer}>
         <Text style={styles.text}>{category}</Text>
-      </View>
+      </Card>
     </Pressable>
   );
 };
