@@ -42,7 +42,7 @@ const Home = ({  navigation }) => {
       />
     </View>
       
-      
+      <View style={{ paddingBottom:250,backgroundColor:'white'}}>
       <FlatList
         data={data}
         keyExtractor={(category) => category.title}
@@ -53,6 +53,7 @@ const Home = ({  navigation }) => {
           />
         )}
       />
+      </View>
     </View>
   );
 };

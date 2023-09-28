@@ -11,7 +11,7 @@ const Counter = () => {
   const [inputToAdd, setInputToAdd] = useState(0)
   const counter = useSelector(state => state.counter.value)
   const dispatch = useDispatch()
-  //const counter = 5
+  
 
   return (
     <View style={styles.container}>

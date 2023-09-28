@@ -15,12 +15,22 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "splash":{
+        "image":"./src/assets/image/LogoB8esports/logoB8-Blanco_Logo-B8.png",
+        "resizeMode":"stretch",
+        "backgroundColor":"#1F2833"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+      },
+      "splash":{
+        "image":"./src/assets/image/LogoB8esports/logoB8-Blanco_Logo-B8.png",
+        "resizeMode":"contain",
+        "backgroundColor":"#1F2833"
       }
     },
     "web": {

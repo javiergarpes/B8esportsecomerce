@@ -20,7 +20,7 @@ const Products = ({ navigation }) => {
   const {data,isLoading}=useGetProductsByCategoryQuery(category)
   
 
-  useEffect(() => {
+  /*useEffect(() => {
     console.log(data)
     if (data) {
     
@@ -28,7 +28,7 @@ const Products = ({ navigation }) => {
         product.title.includes(keyword)
       );
     } 
-  }, []);
+  }, []);*/
   return (
     <SafeAreaView style={styles.container}>
       

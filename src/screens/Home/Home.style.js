@@ -3,7 +3,7 @@ import { colors } from "../../constants/colors";
 
 export default styles = StyleSheet.create({ 
     container:{
-        //marginTop:50,
+        flex:1,
         backgroundColor:colors.decimo,
         height:"auto"
     },

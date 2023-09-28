@@ -9,8 +9,8 @@ export default styles = StyleSheet.create({
     },
     image:{
         alignSelf:"center",
-        height:'45%',
-        width:"90%",
+        height:150,
+        width:150,
         borderRadius:8,
     },
     title:{
@@ -27,7 +27,14 @@ export default styles = StyleSheet.create({
     description:{
         fontSize :21 ,
     },
-
+    imageContainer:{
+        width:150,
+        height:150,
+        flex:1,
+    },
+    description:{
+        flex:1,
+    }
 
 
 
