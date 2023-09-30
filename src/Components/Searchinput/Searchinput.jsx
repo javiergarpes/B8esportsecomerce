@@ -27,12 +27,13 @@ const SearchInput = ({ onSearch }) => {
         value={value}
         onChangeText={setValue}
         placeholder="Search product"
+        placeholderTextColor={"white"}
       />
       <Pressable onPress={search}>
-        <AntDesign name="search1" size={25} color={colors.decimo} />
+        <AntDesign name="search1" size={24} color={"white"} />
       </Pressable>
       <Pressable onPress={clearInput}>
-        <AntDesign name="closecircleo" size={25} color={colors.decimo} />
+        <AntDesign name="closecircleo" size={24} color={"white"}  />
       </Pressable>
     </View>
   )

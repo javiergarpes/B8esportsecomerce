@@ -7,5 +7,6 @@ export const colors ={
     septimo:'#45A29E',//turquesa oscuro
     octavo:'#1F2833',//azul oscuro
     noveno:'#C5C6C7',//gris claro
-    decimo:'#0B0C10',//negro
+    decimo:'#0B0C10',//negro //#0B0C10
+    once:"#1c1b1b"
 }

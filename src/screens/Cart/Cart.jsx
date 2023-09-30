@@ -30,8 +30,8 @@ const Cart = () => {
         />
       </View>
       <View style={styles.buttonContainer}>
-        <Pressable onPress={confirmCart}>
-          <Text>Confirm</Text>
+        <Pressable onPress={confirmCart} style={styles.boton}>
+          <Text >Confirm</Text>
           <View>
             <Text>{`Total $${total}`}</Text>
           </View>

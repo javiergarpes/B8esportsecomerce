@@ -8,7 +8,7 @@ export default styles = StyleSheet.create({
       height: 90,
       paddingTop: 35,
       width: "100%",
-      justifyContent: "center",
+      
       alignItems: "center",
       flexDirection:"row",
     },
@@ -20,7 +20,8 @@ export default styles = StyleSheet.create({
       
     },
     Images:{
-      
+      marginRight:"30%",
+      marginBottom:5,
       height:"110%",
       width: "13%",
       

@@ -27,7 +27,7 @@ export const cartSlice = createSlice({
           (acc, current) => (acc += current.price * current.quantity),
           0
         )
-        console.log('este es el tota', total)
+        console.log('este es el total', total)
         state = {
           ...state,
           items: itemsUpdated,

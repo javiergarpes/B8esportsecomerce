@@ -10,7 +10,7 @@ export default styles = StyleSheet.create({
     containerx: {
         flexDirection:"row",
         borderColor:colors.secondary,
-        backgroundColor:colors.octavo,
+        backgroundColor:colors.decimo,
         marginTop:1,
         padding:1,
         width:"100%",

@@ -18,19 +18,19 @@
       "supportsTablet": true,
       "splash":{
         "image":"./src/assets/image/LogoB8esports/logoB8-Blanco_Logo-B8.png",
-        "resizeMode":"stretch",
-        "backgroundColor":"#1F2833"
+        "resizeMode":"contain",
+        "backgroundColor":"#0B0C10"
       }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#0B0C10"
       },
       "splash":{
         "image":"./src/assets/image/LogoB8esports/logoB8-Blanco_Logo-B8.png",
         "resizeMode":"contain",
-        "backgroundColor":"#1F2833"
+        "backgroundColor":"#0B0C10"
       }
     },
     "web": {

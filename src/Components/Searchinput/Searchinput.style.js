@@ -8,16 +8,17 @@ export default styles = StyleSheet.create({
         alignItems:'center',
         width:'100%',
         paddingTop:10,
-        backgroundColor:colors.secondary,
+        backgroundColor:colors.octavo,
     },
     input:{
         color:'white',
-        backgroundColor:colors.secondary,
+        backgroundColor:colors.octavo,
         borderRadius:8,
         padding:10,
-        borderWidth:1,
-        borderColor: colors.octavo,
-        width:"80%",
+        borderWidth:1.5,
+        marginLeft:4,
+        borderColor: colors.once,
+        width:"75%",
         fontSize:20,
         
     }

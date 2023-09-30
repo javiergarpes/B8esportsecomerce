@@ -2,20 +2,32 @@ import { StyleSheet } from "react-native";
 import { colors } from "../../../constants/colors";
 
 export default styles = StyleSheet.create({ 
-    container:{
+    container: {
+        margin: 15,
+        padding: 8,
+        borderRadius: 20,
+        backgroundColor: colors.once,
+        flexDirection:'row'
+      },
+      name: {
+        fontSize: 20,
+      },
+      image: {
+        width: 90,
+        height: 90,
+        borderRadius:10,
+        
+      },
+      details: {
+        flex: 1,
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+      },
+      cardcontainer:{
         flex:1,
-        padding:8,
-        borderBottomWidth:1,
-        borderBottomColor: colors.octavo,
-    },
-    name:{
-        fontSize:18,
-    },
-    details:{
-        flex:1,
-        flexDirection:'row',
-        flexWrap:'wrap',
-        alignItems:'center',
-        justifyContent:'space-between'
-    }
+        margin:10,
+        flexDirection:'column'
+      }
 })

@@ -42,7 +42,7 @@ const Home = ({  navigation }) => {
       />
     </View>
       
-      <View style={{ paddingBottom:250,backgroundColor:'white'}}>
+      <View style={{ paddingBottom:250}}>
       <FlatList
         data={data}
         keyExtractor={(category) => category.title}

@@ -18,31 +18,33 @@ const Signup = () => {
         <TextInput
           style={styles.inputEmail}
           placeholder="Correo Electronico"
-          placeholderTextColor={colors.octavo}
+          placeholderTextColor="white"
         />
         <TextInput
           style={styles.inputEmail}
           placeholder="Contraseña"
-          placeholderTextColor={colors.octavo}
+          placeholderTextColor="white"
         />
         <TextInput
           style={styles.inputEmail}
           placeholder="Confirmar Contraseña"
-          placeholderTextColor={colors.octavo}
+          placeholderTextColor="white"
+          
         />
         <Pressable style={styles.loginButton}>
           <Text
             style={{ color: colors.decimo, fontSize: 20, fontFamily: "Bebas" }}
           >
-            Sign up
+            Create Account
           </Text>
         </Pressable>
-        <Text style={{ color: "white", fontSize: 12, fontFamily: "Bebas" }}>
+        <Text style={{ color: "white", fontSize: 12, fontFamily: "Bebas", margin:8}}>
           Already have an account?
         </Text>
         <Pressable style={styles.loginButton}>
           <Text
-            style={{ color: colors.decimo, fontSize: 20, fontFamily: "Bebas" }}
+            style={{    color: colors.decimo, fontSize: 20, fontFamily: "Bebas"
+               }}
           >
             Login
           </Text>

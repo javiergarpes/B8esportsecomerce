@@ -14,13 +14,16 @@ export default function App() {
     return null;
   }
 
-  /*return (
+ /* return (
     <Provider store={store}>
       <NavigationContainer>
         <BottomTabNavigator />
       </NavigationContainer>
     </Provider>
   );*/
-  return <Signup/>
+
+  return <Login/>
+  
+  
   
 }

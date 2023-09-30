@@ -4,14 +4,14 @@ import { colors } from '../../constants/colors'
 export default styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.secondary,
+    backgroundColor: colors.octavo,
     
   },
   listContainer: {
     flex: 1,
     marginTop: 15,
     paddingHorizontal: 15,
-    backgroundColor:colors.octavo,
+    backgroundColor:colors.once,
   },
   weapperStyle: {
     justifyContent: 'space-between',
@@ -28,8 +28,9 @@ export default styles = StyleSheet.create({
   },
   image: {
     alignSelf: 'center',
-    height: 150,
-    width: 150,
+    height: 160,
+    width: 160,
+    borderRadius:24,
   },
   title: {
     fontWeight: '700',
