@@ -1,10 +1,31 @@
 import { Image, Pressable, Text, TextInput, View } from "react-native";
-
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Signup.styles";
 import { colors } from "../../constants/colors";
+import {useSignUpMutation} from '../../services/authApi'
+import { useDispatch } from "react-redux";
+import { setUser } from "../../features/auth/authSlice";
 
 const Signup = () => {
+  const [email,setEmail]= useState('')
+  const [password,setPassword]=useState('')
+  const [confirmPass,setConfirmPass]=useState('')
+  const [triggerSignup, result]=useSignUpMutation()
+  const dispatch = useDispatch()
+
+const onSubmit =()=> {
+  console.log(email,password,confirmPass)
+  triggerSignup({
+    email,
+    password,
+  })
+  console.log(result)
+  if(result.isSuccess){
+    dispatch(setUser(result))
+  }
+}
+
+
   return (
     <View style={styles.container}>
       <Image
@@ -19,16 +40,22 @@ const Signup = () => {
           style={styles.inputEmail}
           placeholder="Correo Electronico"
           placeholderTextColor="white"
+          value={email}
+          onChangeText={setEmail}
         />
         <TextInput
           style={styles.inputEmail}
           placeholder="Contraseña"
           placeholderTextColor="white"
+          value={password}
+          onChangeText={setPassword}
         />
         <TextInput
           style={styles.inputEmail}
           placeholder="Confirmar Contraseña"
           placeholderTextColor="white"
+          value={confirmPass}
+          onChangeText={setConfirmPass}
           
         />
         <Pressable style={styles.loginButton}>

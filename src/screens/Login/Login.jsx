@@ -1,10 +1,26 @@
 import { Image, Pressable, Text, TextInput, View } from "react-native";
 
-import React from "react";
+import React, { useState } from "react";
 import styles from "./login.styles";
 import { colors } from "../../constants/colors";
+import { useDispatch } from "react-redux";
 
 const Login = () => {
+  const [email,setEmail]= useState('')
+  const [password,setPassword]=useState('')
+  const [triggerSignup, result]=useSignUpMutation()
+  const dispatch = useDispatch()
+  const onSubmit =()=> {
+    console.log(email,password)
+    triggerLogin({
+      email,
+      password,
+    })
+    console.log(result)
+    if(result.isSuccess){
+      dispatch(setUser(result))
+    }
+  }
   return (
     <View style={styles.container}>
       <Image

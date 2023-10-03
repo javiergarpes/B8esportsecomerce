@@ -14,7 +14,7 @@ export default function App() {
     return null;
   }
 
- /* return (
+ /*return (
     <Provider store={store}>
       <NavigationContainer>
         <BottomTabNavigator />
@@ -22,7 +22,9 @@ export default function App() {
     </Provider>
   );*/
 
-  return <Login/>
+  return <Signup/>
+
+ 
   
   
   
