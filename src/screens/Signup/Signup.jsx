@@ -5,6 +5,7 @@ import { colors } from "../../constants/colors";
 import {useSignUpMutation} from '../../services/authApi'
 import { useDispatch } from "react-redux";
 import { setUser } from "../../features/auth/authSlice";
+import Login from "../Login/Login";
 
 const Signup = () => {
   const [email,setEmail]= useState('')
@@ -13,7 +14,7 @@ const Signup = () => {
   const [triggerSignup, result]=useSignUpMutation()
   const dispatch = useDispatch()
 
-const onSubmit =()=> {
+const onSubmit = ()=> {
   console.log(email,password,confirmPass)
   triggerSignup({
     email,
@@ -58,7 +59,7 @@ const onSubmit =()=> {
           onChangeText={setConfirmPass}
           
         />
-        <Pressable style={styles.loginButton}>
+        <Pressable style={styles.loginButton} onPress={onSubmit} >
           <Text
             style={{ color: colors.decimo, fontSize: 20, fontFamily: "Bebas" }}
           >
@@ -68,7 +69,7 @@ const onSubmit =()=> {
         <Text style={{ color: "white", fontSize: 12, fontFamily: "Bebas", margin:8}}>
           Already have an account?
         </Text>
-        <Pressable style={styles.loginButton}>
+        <Pressable style={styles.loginButton} >
           <Text
             style={{    color: colors.decimo, fontSize: 20, fontFamily: "Bebas"
                }}

@@ -1,12 +1,12 @@
-import {  } from '../screens'
+import {Profile  } from '../screens'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
-const Stack = createNativeStackNavigator()
+const ProfileStack = createNativeStackNavigator()
 
 function ProfileNavigator() {
   return (
     <ProfileStack.Navigator
-      initialRouteName="Orders"
+      initialRouteName="Profile"
       screenOptions={() => ({
         headerShown: false,
       })}

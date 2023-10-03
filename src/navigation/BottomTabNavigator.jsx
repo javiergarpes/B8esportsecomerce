@@ -6,6 +6,7 @@ import { colors } from "../constants/colors";
 import Feather from "@expo/vector-icons/Feather";
 import FontAwesome from '@expo/vector-icons/FontAwesome'
 import OrdersNavigator from './OrderNavigator'
+import ProfileNavigator from "./ProfileNavigator";
 const BottomTab = createBottomTabNavigator();
 
 function BottomTabNavigator() {
@@ -51,6 +52,19 @@ function BottomTabNavigator() {
         tabBarIcon:({focused})=>(
           <Feather
           name='list'
+          size={24}
+          color={focused ? colors.secondary : colors.octavo}
+          />
+        )
+      }}
+      />
+      <BottomTab.Screen
+      name="ProfileNav"
+      component={ProfileNavigator}
+      options={{
+        tabBarIcon:({focused})=>(
+          <Feather
+          name='user'
           size={24}
           color={focused ? colors.secondary : colors.octavo}
           />
