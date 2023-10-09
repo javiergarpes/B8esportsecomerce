@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux";
 import { setUser } from "../../features/auth/authSlice";
 import Login from "../Login/Login";
 
-const Signup = () => {
+const Signup = ({navigation}) => {
   const [email,setEmail]= useState('')
   const [password,setPassword]=useState('')
   const [confirmPass,setConfirmPass]=useState('')
@@ -69,7 +69,7 @@ const onSubmit = ()=> {
         <Text style={{ color: "white", fontSize: 12, fontFamily: "Bebas", margin:8}}>
           Already have an account?
         </Text>
-        <Pressable style={styles.loginButton} >
+        <Pressable style={styles.loginButton} onPress={()=> navigation.navigate('Login')}>
           <Text
             style={{    color: colors.decimo, fontSize: 20, fontFamily: "Bebas"
                }}

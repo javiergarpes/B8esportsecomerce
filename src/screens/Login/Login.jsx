@@ -1,14 +1,14 @@
 import { Image, Pressable, Text, TextInput, View } from "react-native";
-
+import { setUser } from '../../features/auth/authSlice'
 import React, { useState } from "react";
 import styles from "./login.styles";
 import { colors } from "../../constants/colors";
 import { useDispatch } from "react-redux";
-
-const Login = () => {
+import { useLoginMutation } from "../../services/authApi";
+const Login = ({navigation}) => {
   const [email,setEmail]= useState('')
   const [password,setPassword]=useState('')
-  const [triggerSignup, result]=useSignUpMutation()
+  const [triggerLogin, result]=useLoginMutation()
   const dispatch = useDispatch()
   const onSubmit =()=> {
     console.log(email,password)
@@ -35,13 +35,17 @@ const Login = () => {
           style={styles.inputEmail}
           placeholder="Correo Electronico"
           placeholderTextColor="white"
+          value={email}
+          onChangeText={setEmail}
         />
         <TextInput
           style={styles.inputEmail}
           placeholder="Contraseña"
           placeholderTextColor="white"
+          value={password}
+          onChangeText={setPassword}
         />
-        <Pressable style={styles.loginButton}>
+        <Pressable style={styles.loginButton} onPress={onSubmit}>
           <Text style={{ color: colors.decimo, fontFamily: "Bebas",fontSize: 20, }}>
             Login
           </Text>
@@ -49,7 +53,7 @@ const Login = () => {
         <Text style={{ color: "white", fontSize: 12, fontFamily: "Bebas", margin:8 }}>
           No have an account?
         </Text>
-        <Pressable style={styles.loginButton}>
+        <Pressable style={styles.loginButton} onPress={()=> navigation.navigate('Signup')} >
           <Text style={{ color: colors.decimo, fontFamily: "Bebas",fontSize: 20, }}>
             Sign up
           </Text>

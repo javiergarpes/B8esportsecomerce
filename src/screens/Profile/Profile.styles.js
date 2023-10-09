@@ -9,8 +9,9 @@ export default styles = StyleSheet.create({
     alignItems:"center"
   },
   image:{
-    width:195,
-    height:150,
+    width:200,
+    height:200,
+    borderRadius:100
   },
   cameraButton: {
     backgroundColor: colors.secondary,
