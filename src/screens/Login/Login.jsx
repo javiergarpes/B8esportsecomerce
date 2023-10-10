@@ -22,9 +22,9 @@ const Login = ({ navigation }) => {
     if (result.isSuccess) {
       dispatch(setUser(result.data));
       insertSession({
-        locaId: result.data.localId,
+        localId: result.data.localId,
         email: result.data.email,
-        Token: result.data.idToken,
+        token: result.data.idToken,
       }).then(result => console.log(result)).catch(error => console.log(error.message))
     }
   };
