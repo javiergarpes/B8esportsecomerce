@@ -22,7 +22,7 @@ const onSubmit = ()=> {
   })
   console.log(result)
   if(result.isSuccess){
-    dispatch(setUser(result))
+    dispatch(setUser(result.data))
   }
 }
 

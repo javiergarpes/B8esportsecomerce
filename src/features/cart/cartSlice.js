@@ -23,15 +23,15 @@ export const cartSlice = createSlice({
           }
           return item
         })
-        const total = itemsUpdated.reduce(
+        const newtotal = itemsUpdated.reduce(
           (acc, current) => (acc += current.price * current.quantity),
           0
         )
-        console.log('este es el total', total)
-        state = {
+        console.log('este es el total', newtotal)
+        return  {
           ...state,
           items: itemsUpdated,
-          total,
+          total:10,
           updatedAt: new Date().toLocaleString(),
         }
       } else {
@@ -40,9 +40,10 @@ export const cartSlice = createSlice({
           (acc, current) => (acc += current.price * current.quantity),
           0
         )
-        state = {
+        console.log('este es el total 2', new2total)
+        return {
           ...state,
-          total,
+          total: 20,
           updatedAt: new Date().toLocaleString(),
         }
       }

@@ -1,26 +1,33 @@
 import { Image, Pressable, Text, TextInput, View } from "react-native";
-import { setUser } from '../../features/auth/authSlice'
+import { setUser } from "../../features/auth/authSlice";
 import React, { useState } from "react";
 import styles from "./login.styles";
 import { colors } from "../../constants/colors";
 import { useDispatch } from "react-redux";
 import { useLoginMutation } from "../../services/authApi";
-const Login = ({navigation}) => {
-  const [email,setEmail]= useState('')
-  const [password,setPassword]=useState('')
-  const [triggerLogin, result]=useLoginMutation()
-  const dispatch = useDispatch()
-  const onSubmit =()=> {
-    console.log(email,password)
+import { insertSession } from "../../db";
+const Login = ({ navigation }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [triggerLogin, result] = useLoginMutation();
+  const dispatch = useDispatch();
+
+  const onSubmit = () => {
+    //console.log(email, password);
     triggerLogin({
       email,
       password,
-    })
-    console.log(result)
-    if(result.isSuccess){
-      dispatch(setUser(result))
+    });
+    //console.log(result);
+    if (result.isSuccess) {
+      dispatch(setUser(result.data));
+      insertSession({
+        locaId: result.data.localId,
+        email: result.data.email,
+        Token: result.data.idToken,
+      }).then(result => console.log(result)).catch(error => console.log(error.message))
     }
-  }
+  };
   return (
     <View style={styles.container}>
       <Image
@@ -46,15 +53,29 @@ const Login = ({navigation}) => {
           onChangeText={setPassword}
         />
         <Pressable style={styles.loginButton} onPress={onSubmit}>
-          <Text style={{ color: colors.decimo, fontFamily: "Bebas",fontSize: 20, }}>
+          <Text
+            style={{ color: colors.decimo, fontFamily: "Bebas", fontSize: 20 }}
+          >
             Login
           </Text>
         </Pressable>
-        <Text style={{ color: "white", fontSize: 12, fontFamily: "Bebas", margin:8 }}>
+        <Text
+          style={{
+            color: "white",
+            fontSize: 12,
+            fontFamily: "Bebas",
+            margin: 8,
+          }}
+        >
           No have an account?
         </Text>
-        <Pressable style={styles.loginButton} onPress={()=> navigation.navigate('Signup')} >
-          <Text style={{ color: colors.decimo, fontFamily: "Bebas",fontSize: 20, }}>
+        <Pressable
+          style={styles.loginButton}
+          onPress={() => navigation.navigate("Signup")}
+        >
+          <Text
+            style={{ color: colors.decimo, fontFamily: "Bebas", fontSize: 20 }}
+          >
             Sign up
           </Text>
         </Pressable>
