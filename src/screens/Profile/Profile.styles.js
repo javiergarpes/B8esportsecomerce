@@ -5,13 +5,14 @@ export default styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent:"center",
-    backgroundColor: 'white',
+    backgroundColor: colors.decimo,
     alignItems:"center"
   },
   image:{
     width:200,
     height:200,
     borderRadius:100
+    
   },
   cameraButton: {
     backgroundColor: colors.secondary,
