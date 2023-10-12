@@ -1,5 +1,5 @@
 import { Pressable, TextInput, View } from 'react-native'
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { colors } from '../../constants/colors'
 import AntDesign from '@expo/vector-icons/AntDesign'
 import styles from './Searchinput.style'
@@ -7,6 +7,10 @@ import styles from './Searchinput.style'
 
 const SearchInput = ({ onSearch }) => {
   const [value, setValue] = useState('')
+
+  useEffect(() => {
+    onSearch(value)
+  }, [value])
 
   const search = () => {
     onSearch(value)

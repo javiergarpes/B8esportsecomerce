@@ -13,21 +13,22 @@ const Login = ({ navigation }) => {
   const dispatch = useDispatch();
 
   const onSubmit = () => {
-    //console.log(email, password);
     triggerLogin({
       email,
       password,
-    });
-    //console.log(result);
-    if (result.isSuccess) {
-      dispatch(setUser(result.data));
-      insertSession({
-        localId: result.data.localId,
-        email: result.data.email,
-        token: result.data.idToken,
-      }).then(result => console.log(result)).catch(error => console.log(error.message))
-    }
-  };
+    })
+      .unwrap()
+      .then(result => {
+        dispatch(setUser(result))
+        insertSession({
+          localId: result.localId,
+          email: result.email,
+          token: result.idToken,
+        })
+          .then(result => console.log(result))
+          .catch(error => console.log(error.message))
+      })
+  }
   return (
     <View style={styles.container}>
       <Image
