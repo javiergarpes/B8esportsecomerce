@@ -11,6 +11,7 @@ export default styles = StyleSheet.create({
       },
       name: {
         fontSize: 20,
+        color: colors.noveno,
       },
       image: {
         width: 90,
@@ -29,5 +30,13 @@ export default styles = StyleSheet.create({
         flex:1,
         margin:10,
         flexDirection:'column'
-      }
+      },
+      price: {
+        fontSize: 18,
+        color: colors.noveno,
+      },
+      quantity: {
+        fontSize: 18,
+        color: colors.noveno,
+      },
 })

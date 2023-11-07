@@ -9,6 +9,9 @@ export const shopApi = createApi({
     getCategories: builder.query({
       query: () => "Categories.json",
     }),
+    getplataforms: builder.query({
+      query: () => "plataform.json",
+    }),
     getProducts: builder.query({
       query: () => "products.json",
     }),
@@ -46,5 +49,6 @@ export const {
   usePostOrderMutation,
   useGetProfileImageQuery,
   usePostProfileImageMutation,
-  useGetOrdersQuery
+  useGetOrdersQuery,
+  useGetplataformsQuery,
 } = shopApi;

@@ -17,13 +17,13 @@ const Cartitem = ({item}) => {
         />
       </View>
       <View style={styles.cardcontainer}>
-      <View>
+      <View style={{textcolor:"white"}}>
         <Text style={styles.name}>{item.title}</Text>
       </View>
       <View style={styles.details}>
         <View >
-          <Text>{item.quantity}</Text>
-          <Text>{item.price}</Text>
+          <Text style={styles.quantity}>{item.quantity}</Text>
+          <Text style={styles.price}>{item.price}</Text>
         </View>
         <Pressable style={{alignSelf:"flex-start"}}>
           <Feather name="trash" size={24} color={'red'} />

@@ -9,6 +9,7 @@ export default styles = StyleSheet.create({
   },
   listContainer: {
     flex: 5,
+    
   },
   buttonContainer: {
     flex: 1,
@@ -22,5 +23,7 @@ export default styles = StyleSheet.create({
     paddingHorizontal: 10,
     borderRadius: 20,
     flexDirection:"row",
-  }
+  },
+  
+  
 })

@@ -56,4 +56,49 @@ export default[
         },
 
       
+];
+export const PLATFORMS = [
+  {
+    id: "23r",
+    platform: "PC",
+    images: "https://images-na.ssl-images-amazon.com/images/G/01/digital-videogames/vghp/NEW/PC750.png",
+  },
+  {
+    id: "3r1r",
+    platform: "playstation",
+    images: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQGwg1fSm5v6-TrsIKLEsKHjjW8iGcxM_QIprpnhagWNYVv12oj",
+  },
+  {
+    id: "ahf",
+    platform: "Nintendo Switch",
+    images: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTjGWTWXWl7PFLt42CCZYe61mjFuZ9I_lyuCjDRLOt5KsvUDIeu",
+  },
+  {
+    id: "55x",
+    platform: "Xbox",
+    images: "https://static.vecteezy.com/system/resources/previews/018/970/091/original/xbox-black-logo-symbol-free-vector.jpg",
+  },
+];
+
+export const Categories = [
+  {
+  id: "1",
+  platform: "PC",
+  images: "https://images-na.ssl-images-amazon.com/images/G/01/digital-videogames/vghp/NEW/PC750.png",
+},
+{
+  id: "2",
+  platform: "playstation",
+  images: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQGwg1fSm5v6-TrsIKLEsKHjjW8iGcxM_QIprpnhagWNYVv12oj",
+},
+{
+  id: "3",
+  platform: "Nintendo Switch",
+  images: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTjGWTWXWl7PFLt42CCZYe61mjFuZ9I_lyuCjDRLOt5KsvUDIeu",
+},
+{
+  id: "4",
+  platform: "Xbox",
+  images: "https://static.vecteezy.com/system/resources/previews/018/970/091/original/xbox-black-logo-symbol-free-vector.jpg",
+},
 ]

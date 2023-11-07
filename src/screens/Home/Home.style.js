@@ -34,4 +34,24 @@ export default styles = StyleSheet.create({
         width: 100,
         borderRadius:12,
       },
+      weapperStyle: {
+        justifyContent: 'space-between',
+      },
+      plataformcontainer:{  height:80,
+        marginTop:20,
+        bottom:'5%',
+        justifyContent:'center',
+        marginTop:0,
+        alignItems:'center',
+      },
+      imageplataform:{
+       
+        alignSelf: 'center',
+        height: 60,
+        alignItems:"center",
+        marginHorizontal:11,
+        width: 60,
+        borderRadius:12,
+      },
+      
 })
